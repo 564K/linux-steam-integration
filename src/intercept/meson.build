@@ -11,7 +11,7 @@ if with_libintercept == true
     main_intercept = shared_library(
         'lsi-intercept',
         sources: intercept_sources,
-        c_args: ['-fvisibility=hidden'],
+        c_args: ['-fvisibility'],
         link_args: ['-Wl,--version-script=@0@'.format(sym_map)],
         include_directories: nica_includes,
         dependencies: [
